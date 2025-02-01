@@ -81,7 +81,7 @@ export const logout = (req, res) => {
     //clear the cookies
     try {
         res.cookie("jwt", "", { maxAge: 0 });
-        return res.status(200).json({ message: "logged out succesfully" });
+        return res.status(200).json({ message: "logged out successfully" });
 
     } catch (error) {
         console.log("error in logout controller", error.message);

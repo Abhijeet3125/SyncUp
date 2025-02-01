@@ -2,6 +2,7 @@ import { useState } from "react";
 import { useAuthStore } from "../store/useAuthStore.js";
 import { Eye, EyeOff, Loader, Loader2 } from "lucide-react";
 import { Link } from "react-router-dom";
+import toast from "react-hot-toast";
 
 const SignupPage = () => {
   const [showPass, setShowPass] = useState(false);
@@ -14,9 +15,22 @@ const SignupPage = () => {
 
   const { signUp, isSigningup } = useAuthStore();
 
-  const validateForm = () => {};
+  const validateForm = () => {
+    if (!formData.fullName.trim) return toast.error("Full name is required");
+    if (!formData.email.trim) return toast.error("email is required");
+    if (!formData.password) return toast.error("password is required");
+    if (formData.password.length < 6)
+      return toast.error("password must be atleast 6 characters");
+
+    return true;
+  };
+
   const handleSubmit = (e) => {
     e.preventDefault();
+
+    const success = validateForm();
+
+    if (success === true) signUp(formData);
   };
   return (
     <div className="flex flex-col gap-4 items-center justify-center h-screen">
