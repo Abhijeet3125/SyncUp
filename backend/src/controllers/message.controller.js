@@ -54,7 +54,7 @@ export const sendMessage = async (req, res) => {
         });
 
         await newMessage.save();
-        
+
         // real time functionality
 
     } catch (error) {
