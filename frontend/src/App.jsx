@@ -1,19 +1,20 @@
 import React, { useEffect } from "react";
 import Navbar from "./components/Navbar";
 import { Routes, Route, Navigate } from "react-router-dom";
-import HomePage from "./pages/homePage";
-import SignupPage from "./pages/signupPage";
-import LoginPage from "./pages/loginPage";
-import SettingsPage from "./pages/settingsPage";
-import ProfilePage from "./pages/profilePage";
+import HomePage from "./pages/HomePage.jsx";
+import SignupPage from "./pages/SignupPage.jsx";
+import LoginPage from "./pages/LoginPage.jsx";
+import SettingsPage from "./pages/SettingsPage.jsx";
+import ProfilePage from "./pages/ProfilePage.jsx";
 import { axiosInstance } from "./lib/axios";
 import { useAuthStore } from "./store/useAuthStore.js";
 import { Loader } from "lucide-react";
 import { Toaster } from "react-hot-toast";
 
 const App = () => {
-  const { authUser, checkAuth, isCheckingAuth } = useAuthStore();
+  const { authUser, checkAuth, isCheckingAuth, onlineUsers } = useAuthStore();
 
+  console.log({ onlineUsers });
   useEffect(() => {
     checkAuth();
   }, [checkAuth]);
