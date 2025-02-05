@@ -34,6 +34,11 @@ const SignupPage = () => {
   };
   return (
     <div className="flex flex-col gap-4 items-center justify-center h-screen">
+      <div>
+        <img src="/syncup.svg" alt="logo" className="w-32 h-26" />
+      </div>
+      <div className="text-2xl font-bold">Create account</div>
+      <div>create account to get started</div>
       <form onSubmit={handleSubmit} className="space-y-6">
         <label className="input input-bordered flex items-center gap-2">
           <svg

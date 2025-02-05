@@ -10,9 +10,14 @@ const Navbar = () => {
     "
     >
       <div className="container mx-auto px-4 h-16">
-        <div className="navbar bg-base-100">
+        <div className="navbar">
           <div className="flex-1">
-            <a className="btn btn-ghost text-xl">daisyUI</a>
+            <a className="btn btn-ghost text-xl flex">
+              <img src="/syncup.svg" alt="logo" className="w-20 h-15" />
+              <div className="hidden sm:block mb-4 ml-4">
+                SyncUp
+              </div>
+            </a>
           </div>
           <div className="flex items-center gap-2">
             <Link

@@ -8,17 +8,17 @@ const NoChatSelected = () => {
         <div className="flex justify-center gap-4 mb-4">
           <div className="relative">
             <div
-              className="w-16 h-16 rounded-2xl bg-primary/10 flex items-center
+              className="flex items-center
              justify-center animate-pulse"
             >
-                {/* logo here */}
-              <MessageSquare className="w-8 h-8 text-primary " />
+              {/* logo here */}
+              <img src="/syncup.svg" alt="logo" className="w-30 h-20" />
             </div>
           </div>
         </div>
 
         {/* Welcome Text */}
-        <h2 className="text-2xl font-bold">Welcome to Chat-app-v2</h2>
+        <h2 className="text-2xl font-bold">Welcome to SyncUp</h2>
         <p className="text-base-content/60">
           Select a conversation to start chatting
         </p>

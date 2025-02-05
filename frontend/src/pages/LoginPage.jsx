@@ -18,6 +18,11 @@ const LoginPage = () => {
   };
   return (
     <div className="flex flex-col gap-4 items-center justify-center h-screen">
+      <div>
+        <img src="/syncup.svg" alt="logo" className="w-32 h-26" />
+      </div>
+      <div className="text-2xl font-bold">Welcome back</div>
+      <div>sign in to your account</div>
       <form onSubmit={handleSubmit} className="space-y-6">
 
         <label className="input input-bordered flex items-center gap-2">
