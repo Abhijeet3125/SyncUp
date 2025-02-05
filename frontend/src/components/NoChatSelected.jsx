@@ -9,7 +9,7 @@ const NoChatSelected = () => {
           <div className="relative">
             <div
               className="flex items-center
-             justify-center animate-pulse"
+             justify-center animate-bounce"
             >
               {/* logo here */}
               <img src="/syncup.svg" alt="logo" className="w-30 h-20" />
