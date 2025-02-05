@@ -18,9 +18,12 @@ const __dirname = path.resolve();
 app.use(express.json());
 app.use(cookieParser());
 app.use(cors({
-    origin: "http://localhost:5173",
+    origin: process.env.NODE_ENV === "development"
+        ? "http://localhost:5173"  // ✅ Allow localhost during development
+        : "*", // ✅ Allow same-origin requests in production
     credentials: true
 }));
+
 
 app.use("/api/auth", authRoutes);
 app.use("/api/messages", messageRoutes);
